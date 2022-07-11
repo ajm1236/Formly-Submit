@@ -1,0 +1,107 @@
+{
+  "fieldGroupName": "display-flex",
+  "fieldGroup": [
+  {
+    "key": "name",
+    "label": "Name",
+    "templateOptions": {
+      "required": true
+    }
+  },
+  {
+    "key": "email",
+    "type": "input",
+    "className": "flex-1",
+    "templateOptions":{
+      "label": "Email address",
+      "type": "email",
+      "required": true
+    },
+    "validators":{
+      "validation": "[EmailValidator]"
+    }
+  },
+  {
+    "key": "password",
+    "type": "input",
+    "className": "flex-1",
+    "templateOptions": {
+      "label": "Password",
+      "required": true,
+      "type": "password"
+    }
+  },
+  {
+    "key": "dob",
+    "type": "input",
+    "className": "flex-1",
+    "templateOptions": {
+      "labe": "Date of Birth",
+      "required": true,
+      "type": "date"
+    }
+  },
+  {
+    "key": "nationID",
+    "type": "select",
+    "className": "flex-1",
+    "templateOptions":{
+      "label": "Country",
+      "required": true,
+      "options": [{
+        "value": null,
+        "label": "--"
+      }, {
+        "value": 1,
+        "label": "Ireland"
+      }, {
+        "value": 2,
+        "label": "England"
+      }]
+    }
+  },
+  {
+    "key": "cityID",
+    "type": "select",
+    "className": "flex-1",
+    "templateOptions":{
+      "label": "City",
+      "required": true,
+      "options": []
+    },
+    "expressionProperties": {
+      "templateOptions.disabled": "!model.nationID",
+      "model.cityID": "!model.nationID ? null : model.cityID"
+    },
+    "hideExpression": "!this.model.nationID"
+
+  },
+  {
+    "key": "gender",
+    "type": "radio",
+    "className": "flex-1",
+    "templateOptions":{
+      "label": "Gender",
+      "required": true,
+      "options": [
+        {"value": "M", "label": "Male"},
+        {"value": "F", "label": "Female"},
+        {"value": "N/A", "label": "Prefer not to say"}
+      ]
+    }
+  },
+  {
+    "key": "Checkbox",
+    "type": "checkbox",
+    "className": "flex-4",
+    "templateOptions":{
+      "label": "Accept Terms & Conditions",
+      "required": true
+    },
+    "validation": {
+      "messages": {
+        "pattern": "Please accept the Terms & Conditions"
+      }
+    }
+  }]
+}

@@ -1,0 +1,19 @@
+{
+  "Name": "Name",
+  "Date of Birth": "Date of Birth",
+  "Password": "Password",
+  "Email address": "Email Address",
+  "Country": "Country",
+  "City": "City",
+  "Gender": "Gender",
+  "Validation": {
+    "required": "This field is required"
+  },
+  "Choices": {
+    "Male": "Male",
+    "Female": "Female",
+    "Prefer not to say": "Prefer not to say"
+  },
+  "Checkbox": "Accept Terms & Conditions",
+  "Lang": "Change Language"
+}

@@ -1,0 +1,19 @@
+{
+  "Name": "Ainm",
+  "Date of Birth": "Dáta Breithe",
+  "Password": "Pasfhocal",
+  "Email address": "Seoladh ríomhphoist",
+  "Country": "Tír",
+  "City": "Chathair",
+  "Gender": "Inscne",
+  "Validation": {
+    "required": "Tá an réimse seo ag teastáil."
+  },
+  "Choices": {
+    "Male": "Fir",
+    "Female": "Baineann",
+    "Prefer not to say": "Is fearr gan a rá"
+  },
+  "Checkbox": "Glac le Téarmaí & Coinníollacha",
+  "Lang": "Athraigh Teanga"
+}
