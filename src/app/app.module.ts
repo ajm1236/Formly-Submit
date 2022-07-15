@@ -11,11 +11,11 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormlyDatePickerModule } from '@ngx-formly/primeng/datepicker';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { NgSelectFormlyComponent } from './ng-select.type';
-import { NgControl } from '@angular/forms';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { registerTranslateExtension } from './translate.extension';
+import { FormService } from './form.service';
 
 export function EmailValidatorMessage(err, field: FormlyFieldConfig) {
   return `"${field.formControl.value}" is not a valid Email Address`;
@@ -71,7 +71,8 @@ export function HttpLoaderFactory(http: HttpClient) {
       multi: true,
       useFactory: registerTranslateExtension,
       deps: [TranslateService]
-    }
+    },
+    FormService
   ],
   bootstrap: [ AppComponent ]
 })

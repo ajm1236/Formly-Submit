@@ -16,6 +16,7 @@ export class TranslateExtension {
     field.expressionProperties = {
       ...(field.expressionProperties || {}),
       'templateOptions.label': this.translate.stream(to.label),
+
     };
   }
 }
@@ -25,8 +26,8 @@ export function registerTranslateExtension(translate: TranslateService){
     validationMessages: [
       {
         name: 'required',
-        message(){
-          return translate.stream('Validation.required');
+        message() {
+          return translate.stream('FORM.VALIDATION.REQUIRED');
         }
       }
     ],

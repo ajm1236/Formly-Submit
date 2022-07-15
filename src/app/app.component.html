@@ -1,23 +1,30 @@
 <div class="p-grid p-align-center" style="height: 100vh"  [ngStyle]="{backgroundColor:'var(--teal-500)'}">
   <div class="p-col-6"  [ngStyle]="{color:'var(--teal-50)'}" >
     <div style="text-align: center" class="col-xs-12" [ngStyle]="{backgroundColor:'var(--teal-700)'}"  >
-      <h1>Revenue</h1>
+      <p class="text-6xl">Revenue | myAccount</p>
     </div>
-    <div style="margin-bottom: 20px;">
-      <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <formly-form
-          [model]="model"
-          [fields]="fields"
-          [options]="options"
-          [form]="form"
-          ></formly-form>
-          <br>
-        <div class="button-row" style="text-align:center">
-          <hr>
-          <button pButton pRipple type="submit" class="p-button-success" [disabled]="!form.valid" >Submit</button>
-          <button pButton pRipple type="button" class="p-button-danger"(click)="options.resetModel()">Clear</button>
-        </div>
-      </form>
+    <div class="card p-3 bg-teal-300 border-round-xl" style="margin-left: 20px; margin-right:20px; width:auto;" [ngStyle]="{backgroundColor:'var(--teal-300)'}" >
+      <div class="flex flex-wrap card-container">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <formly-form
+            [model]="model"
+            [fields]="fields"
+            [options]="options"
+            [form]="form"
+            ></formly-form>
+            <br>
+            <hr>
+          <div class="button-row" style="text-align:center">
+            <div>
+              <button pButton pRipple type="submit" class="border-round-lg transition-colors transition-duration-100 bg-teal-500 hover:bg-yellow-500" [disabled]="!form.valid">Submit</button>
+            </div>
+            <br>
+            <div>
+              <button pButton pRipple type="button" class="border-round-lg transition-colors transition-duration-100 bg-teal-600 hover:bg-yellow-500 "(click)="options.resetModel()">Clear</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>

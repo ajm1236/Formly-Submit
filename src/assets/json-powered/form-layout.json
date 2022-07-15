@@ -1,0 +1,205 @@
+[
+  {
+    "fieldGroupClassName": "formgrid grid text-xl",
+    "fieldGroup": [
+      {
+        "key": "name",
+        "type": "input",
+        "className": "field col-12 md:col-6",
+        "templateOptions": {
+          "required": true,
+          "translate": true,
+          "label": "FORM.NAME",
+          "placeholder": "Name"
+        }
+      },
+      {
+        "key": "lang",
+        "type": "select",
+        "className": "field col-12 md:col-6",
+        "templateOptions": {
+          "required": true,
+          "translate": true,
+          "label": "FORM.LANG",
+          "change":" (field) => this.translate.use(field.formControl.value)",
+          "options": [
+             { "label": "ga", "value": "ga" },
+             { "label": "en", "value": "en" }
+           ]
+        }
+      },
+      {
+        "key": "email",
+        "type": "input",
+        "className": "field col-12 md:col-6",
+        "templateOptions": {
+          "label": "FORM.EMAIL",
+          "type": "email",
+          "required":true,
+          "translate": true,
+          "placeholder": "Email Address"
+
+        }
+      },
+      {
+        "key": "password",
+        "type": "input",
+        "className": "field col-12 md:col-6",
+        "templateOptions": {
+          "label": "FORM.PASSWORD",
+          "required": true,
+          "type": "password",
+          "translate": true,
+          "placeholder": "Password"
+
+        }
+      },
+      {
+        "key": "dob",
+        "type": "input",
+        "className":"field col-12 md:col-6",
+        "templateOptions": {
+          "label": "FORM.DOB",
+          "translate": true,
+          "required":true,
+          "type": "date",
+          "placeholder": "Date Of Birth"
+
+        }
+      },
+      {
+        "key": "nationID",
+        "type": "select",
+        "className":"field col-12 md:col-3",
+        "templateOptions":{
+          "label":"FORM.COUNTRY",
+          "required":true,
+          "placeholder": "Country",
+          "translate": true,
+          "options": [
+            {
+              "value": null,
+              "label": "--"
+            },
+            {
+              "value": 1,
+              "label": "Ireland"
+            },
+            {
+              "value": 2,
+              "label": "England"
+            },
+            {
+              "value": 3,
+              "label": "USA"
+            }
+          ]
+        }
+      },
+      {
+        "key": "cityID",
+        "type": "select",
+        "className":"field col-12 md:col-3",
+        "templateOptions":{
+          "label":"FORM.CITY",
+          "required":true,
+          "translate": true,
+          "options": [
+            {
+              "value": null,
+              "label": "--",
+              "nationID": null
+            },
+            {
+              "value": 1,
+              "label": "Dublin",
+              "nationID": 1
+            },
+            {
+              "value": 12,
+              "label": "Cork",
+              "nationID": 1
+            },
+            {
+              "value":13,
+              "label": "Galway",
+              "nationID": 1
+            },
+            {
+              "value": 2,
+              "label": "London",
+              "nationID": 2
+            },
+            {
+              "value":22,
+              "label": "Manchester",
+              "nationID": 2
+            },
+            {
+              "value":23,
+              "label": "Newcastle",
+              "nationID": 2
+            },
+            {
+              "value":3,
+              "label": "New York",
+              "nationID": 3
+            },
+            {
+              "value":32,
+              "label": "Florida",
+              "nationID": 3
+            },
+            {
+              "value":33,
+              "label": "Los Angeles",
+              "nationID": 3
+            }
+          ]
+        },
+        "expressionProperties": {
+          "templateOptions.disabled": "!model.nationID",
+          "model.cityID": "!model.nationID ? null : model.cityID"
+        },
+        "hideExpression": "!model.nationID"
+      },
+      {
+        "key": "gender",
+        "type": "radio",
+        "className":"field col-12 md:col-6",
+        "templateOptions": {
+          "label": "FORM.GENDER",
+          "required": true,
+          "translate": true,
+          "options": [
+            {
+              "label": "FORM.CHOICES.MALE",
+              "value": "M"
+            },
+
+            {
+              "label": "FORM.CHOICES.FEMALE",
+              "value": "F"
+            },
+            {
+              "label": "FORM.CHOICES.N/A",
+              "value": "N/A"
+            }
+          ]
+        }
+      },
+      {
+        "key":"Checkbox",
+        "type": "checkbox",
+        "className":"field col-12 md:col-6 text-base",
+        "templateOptions":{
+          "label":"FORM.CHECKBOX",
+          "required": true,
+          "translate": true
+
+        }
+      }
+    ]
+  }
+]
+

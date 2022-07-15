@@ -1,19 +1,22 @@
 {
-  "Name": "Name",
-  "Date of Birth": "Date of Birth",
-  "Password": "Password",
-  "Email address": "Email Address",
-  "Country": "Country",
-  "City": "City",
-  "Gender": "Gender",
-  "Validation": {
-    "required": "This field is required"
-  },
-  "Choices": {
-    "Male": "Male",
-    "Female": "Female",
-    "Prefer not to say": "Prefer not to say"
-  },
-  "Checkbox": "Accept Terms & Conditions",
-  "Lang": "Change Language"
+  "FORM":
+  {
+    "NAME": "Name",
+    "DOB": "Date of Birth",
+    "PASSWORD": "Password",
+    "EMAIL": "Email Address",
+    "COUNTRY": "Country",
+    "CITY": "City",
+    "GENDER": "Gender",
+    "VALIDATION": {
+      "REQUIRED": "This field is required"
+    },
+    "CHOICES": {
+      "MALE": "Male",
+      "FEMALE": "Female",
+      "N/A": "Prefer not to say"
+    },
+    "CHECKBOX": "Accept Terms & Conditions",
+    "LANG": "Change Language"
+  }
 }

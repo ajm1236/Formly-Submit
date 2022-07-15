@@ -1,19 +1,22 @@
 {
-  "Name": "Ainm",
-  "Date of Birth": "Dáta Breithe",
-  "Password": "Pasfhocal",
-  "Email address": "Seoladh ríomhphoist",
-  "Country": "Tír",
-  "City": "Chathair",
-  "Gender": "Inscne",
-  "Validation": {
-    "required": "Tá an réimse seo ag teastáil."
-  },
-  "Choices": {
-    "Male": "Fir",
-    "Female": "Baineann",
-    "Prefer not to say": "Is fearr gan a rá"
-  },
-  "Checkbox": "Glac le Téarmaí & Coinníollacha",
-  "Lang": "Athraigh Teanga"
+  "FORM":
+  {
+    "NAME": "Ainm",
+    "DOB": "Dáta Breithe",
+    "PASSWORD": "Pasfhocal",
+    "EMAIL": "Seoladh ríomhphoist",
+    "COUNTRY": "Tír",
+    "CITY": "Chathair",
+    "GENDER": "Inscne",
+    "VALIDATION": {
+      "REQUIRED": "Tá an réimse seo ag teastáil."
+    },
+    "CHOICES": {
+      "MALE": "Fir",
+      "FEMALE": "Baineann",
+      "N/A": "Is fearr gan a rá"
+    },
+    "CHECKBOX": "Glac le Téarmaí & Coinníollacha",
+    "LANG": "Athraigh Teanga"
+  }
 }
