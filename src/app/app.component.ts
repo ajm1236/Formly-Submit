@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import { FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { FormlyFormOptions, FormlyFieldConfig, FormlyTemplateOptions } from '@ngx-formly/core';
 import { DataService } from './core/data.service';
@@ -235,6 +235,7 @@ export class AppComponent{
       this.form = new FormGroup({});
       this.model = model;
       this.fields = this.mapFields(fields);
+      //this.model.lang.templateOptions.change = this.translate.use(this.model.fields.label);
     })
 
     translate.addLangs(['en', 'ga']);
@@ -243,13 +244,13 @@ export class AppComponent{
     const browserLang = translate.getBrowserLang();
 
     translate.use(browserLang.match(/en|ga/) ? browserLang : 'en');
-    //this.model.lang = translate.currentLang;
+    // this.model.lang = translate.currentLang;
   }
 
   ngOnInit(){
     this.http.get<FormlyFieldConfig[]>('/assests/form-layout.json')
       .subscribe(fields => {
-        this.fields =fields;
+        this.fields = fields;
   })
   }
   onSubmit(){
@@ -265,12 +266,20 @@ export class AppComponent{
 
   mapFields(fields: FormlyFieldConfig[]){
     return fields.map(f => {
-      if(f.key === 'gender'){
-        f.type = 'radio';
-        f.templateOptions.options = this.formService.getGenders();
+      if(f.key === 'lang'){
+        f.type = 'select';
+        f.templateOptions.options = this.formService.getLangs();
+        f.templateOptions.change = (fields) => this.translate.use(fields.formControl.value)
       }
       return f;
     })
 
   }
+
+  useLanguage(language: string): void {
+    this.translate.use(language);
+}
+
+
+
 }

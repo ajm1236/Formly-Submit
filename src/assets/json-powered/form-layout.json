@@ -9,23 +9,7 @@
         "templateOptions": {
           "required": true,
           "translate": true,
-          "label": "FORM.NAME",
-          "placeholder": "Name"
-        }
-      },
-      {
-        "key": "lang",
-        "type": "select",
-        "className": "field col-12 md:col-6",
-        "templateOptions": {
-          "required": true,
-          "translate": true,
-          "label": "FORM.LANG",
-          "change":" (field) => this.translate.use(field.formControl.value)",
-          "options": [
-             { "label": "ga", "value": "ga" },
-             { "label": "en", "value": "en" }
-           ]
+          "label": "FORM.NAME"
         }
       },
       {
@@ -36,8 +20,19 @@
           "label": "FORM.EMAIL",
           "type": "email",
           "required":true,
+          "translate": true
+        }
+
+      },
+      {
+        "key": "dob",
+        "type": "input",
+        "className":"field col-12 md:col-6",
+        "templateOptions": {
+          "label": "FORM.DOB",
           "translate": true,
-          "placeholder": "Email Address"
+          "required":true,
+          "type": "date"
 
         }
       },
@@ -49,22 +44,33 @@
           "label": "FORM.PASSWORD",
           "required": true,
           "type": "password",
-          "translate": true,
-          "placeholder": "Password"
+          "translate": true
 
         }
       },
       {
-        "key": "dob",
-        "type": "input",
+        "key": "gender",
+        "type": "radio",
         "className":"field col-12 md:col-6",
         "templateOptions": {
-          "label": "FORM.DOB",
+          "label": "FORM.GENDER",
+          "required": true,
           "translate": true,
-          "required":true,
-          "type": "date",
-          "placeholder": "Date Of Birth"
+          "options": [
+            {
+              "label": "FORM.CHOICES.MALE",
+              "value": "M"
+            },
 
+            {
+              "label": "FORM.CHOICES.FEMALE",
+              "value": "F"
+            },
+            {
+              "label": "FORM.CHOICES.N/A",
+              "value": "N/A"
+            }
+          ]
         }
       },
       {
@@ -164,28 +170,12 @@
         "hideExpression": "!model.nationID"
       },
       {
-        "key": "gender",
-        "type": "radio",
+        "key": "File",
+        "type": "file",
         "className":"field col-12 md:col-6",
         "templateOptions": {
-          "label": "FORM.GENDER",
-          "required": true,
-          "translate": true,
-          "options": [
-            {
-              "label": "FORM.CHOICES.MALE",
-              "value": "M"
-            },
-
-            {
-              "label": "FORM.CHOICES.FEMALE",
-              "value": "F"
-            },
-            {
-              "label": "FORM.CHOICES.N/A",
-              "value": "N/A"
-            }
-          ]
+          "label": "FORM.FILE",
+          "translate": true
         }
       },
       {
@@ -199,6 +189,7 @@
 
         }
       }
+
     ]
   }
 ]

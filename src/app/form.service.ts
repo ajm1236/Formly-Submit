@@ -30,4 +30,9 @@ export class FormService {
   getCities(){
     return this.http.get<{ label: string, value: any }[]>('assests/json-powered/city-options.json');
   }
+
+  getLangs(){
+    return this.http.get<{ label: string, value: string }[]>('assests/json-powered/lang-options.json');
+
+  }
 }

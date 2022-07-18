@@ -16,6 +16,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { registerTranslateExtension } from './translate.extension';
 import { FormService } from './form.service';
+import { FileValueAccessor } from './file/file-value-accessor';
+import { FormlyFieldFile } from './file/file-type.component';
+
 
 export function EmailValidatorMessage(err, field: FormlyFieldConfig) {
   return `"${field.formControl.value}" is not a valid Email Address`;
@@ -53,6 +56,9 @@ export function HttpLoaderFactory(http: HttpClient) {
         {
           name: 'my-autocomplete',
           component: NgSelectFormlyComponent
+        },
+        {
+           name: 'file', component: FormlyFieldFile, wrappers: ['form-field'],
         }
       ],
     }),
@@ -64,7 +70,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  declarations: [AppComponent, NgSelectFormlyComponent],
+  declarations: [AppComponent, NgSelectFormlyComponent, FileValueAccessor, FormlyFieldFile],
   providers: [
     {
       provide: FORMLY_CONFIG,

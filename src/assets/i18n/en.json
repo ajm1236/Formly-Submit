@@ -17,6 +17,7 @@
       "N/A": "Prefer not to say"
     },
     "CHECKBOX": "Accept Terms & Conditions",
-    "LANG": "Change Language"
+    "LANG": "Change Language",
+    "FILE": "File"
   }
 }
