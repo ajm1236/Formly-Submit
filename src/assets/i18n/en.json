@@ -18,6 +18,9 @@
     },
     "CHECKBOX": "Accept Terms & Conditions",
     "LANG": "Change Language",
-    "FILE": "File"
+    "FILE": "File",
+    "STREET": "Street",
+    "ZIP": "Zip Code"
+
   }
 }

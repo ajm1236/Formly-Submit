@@ -21,8 +21,8 @@
           "type": "email",
           "required":true,
           "translate": true
-        }
 
+        }
       },
       {
         "key": "dob",
@@ -63,7 +63,7 @@
             },
 
             {
-              "label": "FORM.CHOICES.FEMALE",
+              "label": "FORM.CHOICEs.FEMALE",
               "value": "F"
             },
             {

@@ -7,16 +7,20 @@ import { FormlyFieldConfig } from '@ngx-formly/core';
 export class FormService {
   constructor(private http: HttpClient){}
 
-  getUserData(): Observable<any> {
-    return forkJoin([this.getUser(), this.getFields()]);
+  // getForm2Data(): Observable<any> {
+  //   return forkJoin([this.getUser(), this.getForm2Fields]);
+  // }
+
+  getUserData(jsonLink: string): Observable<any> {
+    return forkJoin([this.getUser(), this.getFields(jsonLink)]);
   }
 
   getUser(){
     return this.http.get<{ name: string }>('assets/json-powered/user.json');
   }
 
-  getFields() {
-    return this.http.get<FormlyFieldConfig[]>('assets/json-powered/form-layout.json');
+  getFields(jsonLink: string) {
+    return this.http.get<FormlyFieldConfig[]>(jsonLink);
   }
 
   getGenders() {

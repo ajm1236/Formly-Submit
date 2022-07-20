@@ -1,0 +1,40 @@
+[
+  {
+    "fieldGroupClassName": "formgrid grid text-xl",
+    "fieldGroup": [
+      {
+        "key": "name",
+        "type": "input",
+        "className": "field col-12 md:col-3",
+        "templateOptions": {
+          "required": true,
+          "translate": true,
+          "label": "FORM.NAME"
+        }
+      },
+      {
+        "key": "pps",
+        "type": "input",
+        "className": "field col-12 md:col-3",
+        "templateOptions": {
+          "type": "number",
+          "required": true,
+          "translate": true,
+          "label": "PPS"
+        }
+      },
+      {
+        "key": "dob",
+        "type": "input",
+        "className":"field col-12 md:col-3",
+        "templateOptions": {
+          "label": "FORM.DOB",
+          "translate": true,
+          "required":true,
+          "type": "date"
+
+        }
+      }
+    ]
+  }
+]

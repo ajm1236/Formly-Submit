@@ -18,6 +18,8 @@
     },
     "CHECKBOX": "Glac le Téarmaí & Coinníollacha",
     "LANG": "Athraigh Teanga",
-    "FILE": "Comhad"
+    "FILE": "Comhad",
+    "STREET": "Sráid",
+    "ZIP": "Cód Zip"
   }
 }

@@ -1,0 +1,77 @@
+[
+  {
+    "fieldGroupClassName": "formgrid grid text-xl",
+    "fieldGroup": [
+      {
+        "key": "name",
+        "type": "input",
+        "className": "field col-12 md:col-6",
+        "templateOptions": {
+          "required": true,
+          "translate": true,
+          "label": "FORM.NAME"
+        }
+      },
+      {
+        "key": "email",
+        "type": "input",
+        "className": "field col-12 md:col-6",
+        "templateOptions": {
+          "label": "FORM.EMAIL",
+          "type": "email",
+          "required":true,
+          "translate": true
+
+        }
+      },
+      {
+        "key": "street",
+        "type": "input",
+        "className": "field col-12 md:col-6",
+        "templateOptions": {
+          "label": "FORM.STREET",
+          "required":true,
+          "translate": true
+
+        }
+      },
+      {
+        "key": "cityName",
+        "type": "input",
+        "className": "field col-12 md:col-6",
+        "templateOptions": {
+          "label": "FORM.CITY",
+          "type": "email",
+          "required":true,
+          "translate": true
+
+        }
+      },
+      {
+        "key": "zip",
+        "type": "input",
+        "className": "field col-12 md:col-6",
+        "templateOptions": {
+          "label": "FORM.ZIP",
+          "type": "number",
+          "required":true,
+          "translate": true,
+          "max": 999999,
+          "min": 0
+
+        }
+      },
+      {
+        "key":"Checkbox",
+        "type": "checkbox",
+        "className":"field col-12 md:col-3 text-base",
+        "templateOptions":{
+          "label":"FORM.CHECKBOX",
+          "required": true,
+          "translate": true
+
+        }
+      }
+    ]
+  }
+]

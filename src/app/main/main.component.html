@@ -1,0 +1,24 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <formly-form
+    [model]="model"
+    [fields]="fields"
+    [options]="options"
+    [form]="form"
+    ></formly-form>
+    <br>
+    <hr>
+  <div class="button-row" style="text-align:center">
+    <div>
+      <button pButton pRipple type="submit" class="border-round-lg transition-colors transition-duration-100 bg-teal-500 hover:bg-yellow-500" [disabled]="!form.valid">Submit</button>
+    </div>
+    <br>
+    <div>
+      <button pButton pRipple type="button" class="border-round-lg transition-colors transition-duration-100 bg-teal-600 hover:bg-yellow-500 "(click)="options.resetModel()">Clear</button>
+    </div>
+  </div>
+</form>
+<button (click)="useLanguage('en')">EN</button>
+<button (click)="useLanguage('ga')">GA</button>
+
+
+

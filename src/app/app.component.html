@@ -2,32 +2,33 @@
   <div class="p-col-6"  [ngStyle]="{color:'var(--teal-50)'}" >
     <div style="text-align: center" class="col-xs-12" [ngStyle]="{backgroundColor:'var(--teal-700)'}"  >
       <p class="text-6xl">Revenue | myAccount</p>
-    </div>
-    <div class="card p-3 bg-teal-300 border-round-xl" style="margin-left: 20px; margin-right:20px; width:auto;" [ngStyle]="{backgroundColor:'var(--teal-300)'}" >
-      <div class="flex flex-wrap card-container">
-        <form [formGroup]="form" (ngSubmit)="onSubmit()">
-          <formly-form
-            [model]="model"
-            [fields]="fields"
-            [options]="options"
-            [form]="form"
-            ></formly-form>
-            <br>
-            <hr>
-          <div class="button-row" style="text-align:center">
-            <div>
-              <button pButton pRipple type="submit" class="border-round-lg transition-colors transition-duration-100 bg-teal-500 hover:bg-yellow-500" [disabled]="!form.valid">Submit</button>
-            </div>
-            <br>
-            <div>
-              <button pButton pRipple type="button" class="border-round-lg transition-colors transition-duration-100 bg-teal-600 hover:bg-yellow-500 "(click)="options.resetModel()">Clear</button>
-            </div>
-          </div>
-        </form>
-        <button (click)="useLanguage('en')">EN</button>
-        <button (click)="useLanguage('ga')">GA</button>
+      <hr>
+      <ul>
+        <li
+          role="presentation"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="/">Main</a>
+      </li>
+        <li
+          role="presentation"
+          routerLinkActive="active">
+          <a [routerLink]="['form2']">Form2</a>
+        </li>
+        <li
+          role="presentation"
+          routerLinkActive="active">
+          <a [routerLink]="['form3']">Form3</a>
+        </li>
+      </ul>
+      <hr>
+      <div class="card p-3 bg-teal-300 border-round-xl" style="margin-left: 20px; margin-right:20px; width:auto;" [ngStyle]="{backgroundColor:'var(--teal-300)'}" >
+        <div class="flex flex-wrap card-container">
+          <router-outlet></router-outlet>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
 

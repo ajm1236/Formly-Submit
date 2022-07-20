@@ -18,6 +18,12 @@ import { registerTranslateExtension } from './translate.extension';
 import { FormService } from './form.service';
 import { FileValueAccessor } from './file/file-value-accessor';
 import { FormlyFieldFile } from './file/file-type.component';
+//import { AppRoutingModule } from './app-routing.module'
+import { Form2Component } from './form2/form2.component';
+import { Form3Component } from './form3/form3.component';
+import { Routes, RouterModule } from '@angular/router';
+import { MainComponent } from './main/main.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 export function EmailValidatorMessage(err, field: FormlyFieldConfig) {
@@ -27,7 +33,12 @@ export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, '../../assets/i18n/', '.json');
   }
 
+const appRoutes: Routes = [
+  { path: '', component: MainComponent },
+  { path: 'form2', component: Form2Component },
+  { path: 'form3', component: Form3Component }
 
+];
 
 @NgModule({
   imports: [
@@ -41,6 +52,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserAnimationsModule,
     NgSelectModule,
     HttpClientModule,
+    // AppRoutingModule,
+    RouterModule.forRoot(appRoutes),
     FormlyModule.forRoot({
       validationMessages: [
         {
@@ -70,7 +83,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  declarations: [AppComponent, NgSelectFormlyComponent, FileValueAccessor, FormlyFieldFile],
+  declarations: [AppComponent, NgSelectFormlyComponent, FileValueAccessor, FormlyFieldFile, MainComponent, Form2Component, Form3Component, NotFoundComponent],
   providers: [
     {
       provide: FORMLY_CONFIG,
