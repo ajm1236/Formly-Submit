@@ -39,7 +39,7 @@ export class MainComponent{
       //this.model.lang.templateOptions.change = this.translate.use(this.model.fields.label);
     })
 
-    translate.addLangs(['en', 'ga']);
+    translate.addLangs(['en', 'ga', 'uk']);
     translate.setDefaultLang('en');
 
     const browserLang = translate.getBrowserLang();
@@ -67,16 +67,15 @@ export class MainComponent{
 
   mapFields(fields: FormlyFieldConfig[]){
     return fields.map(f => {
-      if(f.key === 'lang'){
-        f.type = 'select';
-        f.templateOptions.options = this.formService.getLangs();
-        f.templateOptions.change = (fields) => this.translate.use(fields.formControl.value)
-      }
+      // if(f.key === 'lang'){
+      //   f.type = 'select';
+      //   f.templateOptions.options = this.formService.getLangs();
+      //   f.templateOptions.change = (fields) => this.translate.use(fields.formControl.value)
+      // }
       return f;
     })
 
   }
-
   useLanguage(language: string): void {
     this.translate.use(language);
   }

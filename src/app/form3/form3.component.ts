@@ -36,7 +36,7 @@ export class Form3Component {
         this.fields = this.mapFields(fields);
       })
 
-      translate.addLangs(['en', 'ga']);
+      translate.addLangs(['en', 'ga', 'uk']);
       translate.setDefaultLang('en');
 
       const browserLang = translate.getBrowserLang();

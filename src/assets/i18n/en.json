@@ -20,7 +20,7 @@
     "LANG": "Change Language",
     "FILE": "File",
     "STREET": "Street",
-    "ZIP": "Zip Code"
-
+    "ZIP": "Zip Code",
+    "ERROR": "ERROR: Page not found!"
   }
 }

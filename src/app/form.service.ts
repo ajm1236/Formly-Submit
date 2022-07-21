@@ -23,17 +23,6 @@ export class FormService {
     return this.http.get<FormlyFieldConfig[]>(jsonLink);
   }
 
-  getGenders() {
-    return this.http.get<{ label: string, value: string }[]>('assests/json-powered/gender-options.json');
-  }
-
-  getNations(){
-    return this.http.get<{ label: string, value: any }[]>('assests/json-powered/nation-options.json');
-  }
-
-  getCities(){
-    return this.http.get<{ label: string, value: any }[]>('assests/json-powered/city-options.json');
-  }
 
   getLangs(){
     return this.http.get<{ label: string, value: string }[]>('assests/json-powered/lang-options.json');

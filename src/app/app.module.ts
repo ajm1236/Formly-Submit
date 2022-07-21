@@ -25,7 +25,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
-
 export function EmailValidatorMessage(err, field: FormlyFieldConfig) {
   return `"${field.formControl.value}" is not a valid Email Address`;
 }
@@ -36,7 +35,9 @@ export function HttpLoaderFactory(http: HttpClient) {
 const appRoutes: Routes = [
   { path: '', component: MainComponent },
   { path: 'form2', component: Form2Component },
-  { path: 'form3', component: Form3Component }
+  { path: 'form3', component: Form3Component },
+  { path: 'not-found', component: NotFoundComponent },
+  { path: '**', redirectTo: '/not-found' }
 
 ];
 
@@ -52,7 +53,6 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     NgSelectModule,
     HttpClientModule,
-    // AppRoutingModule,
     RouterModule.forRoot(appRoutes),
     FormlyModule.forRoot({
       validationMessages: [

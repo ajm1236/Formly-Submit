@@ -20,6 +20,7 @@
     "LANG": "Athraigh Teanga",
     "FILE": "Comhad",
     "STREET": "Sráid",
-    "ZIP": "Cód Zip"
+    "ZIP": "Cód Zip",
+    "ERROR": "EARRÁID: Níor aimsíodh an leathanach!"
   }
 }
