@@ -7,10 +7,6 @@ import { FormlyFieldConfig } from '@ngx-formly/core';
 export class FormService {
   constructor(private http: HttpClient){}
 
-  // getForm2Data(): Observable<any> {
-  //   return forkJoin([this.getUser(), this.getForm2Fields]);
-  // }
-
   getUserData(jsonLink: string): Observable<any> {
     return forkJoin([this.getUser(), this.getFields(jsonLink)]);
   }
@@ -22,7 +18,6 @@ export class FormService {
   getFields(jsonLink: string) {
     return this.http.get<FormlyFieldConfig[]>(jsonLink);
   }
-
 
   getLangs(){
     return this.http.get<{ label: string, value: string }[]>('assests/json-powered/lang-options.json');

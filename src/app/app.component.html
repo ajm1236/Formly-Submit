@@ -1,29 +1,31 @@
-<div class="p-grid p-align-center" style="height: 100vh"  [ngStyle]="{backgroundColor:'var(--teal-600)'}">
+<div class="p-grid p-align-center" style="height: 100vh"  [ngStyle]="{backgroundColor:'var(--teal-700)'}">
   <div class="p-col-6"  [ngStyle]="{color:'var(--teal-50)'}" >
     <div class="col-xs-12" [ngStyle]="{backgroundColor:'var(--teal-700)'}"  >
       <p class="text-6xl" style="text-align:center;">Revenue | myAccount</p>
       <hr>
-      <ul class= "font-semibold card p-3 bg-teal-400 border-round-xl text-lg list-none " style= "text-align:center; align-items: center; margin-left: 20px; margin-right:20px; width:auto;">
+      <ul class= "font-semibold card p-3 bg-teal-400 border-round-xl text-lg list-none shadow-5" style= "text-align:center; align-items: center; margin-left: 20px; margin-right:20px; width:auto; font-family: Tahoma, sans-serif;">
         <li
           role="presentation"
           routerLinkActive="active"
           [routerLinkActiveOptions]="{exact: true}">
           <a class="no-underline" routerLink="/">Main</a>
       </li>
+      <hr style="width:10%">
         <li
           role="presentation"
           routerLinkActive="active">
-          <a class="no-underline" [routerLink]="['form2']">Form2</a>
+          <a class="no-underline" [routerLink]="['form2']">Form 2</a>
       </li>
+      <hr style="width:10%">
         <li
           role="presentation"
           routerLinkActive="active">
-          <a class="no-underline" [routerLink]="['form3']">Form3</a>
+          <a class="no-underline" [routerLink]="['form3']">Form 3</a>
       </li>
       </ul>
       <hr>
-      <div class="card p-3 bg-teal-300 border-round-xl" style="margin-left: 20px; margin-right:20px; width:auto;" [ngStyle]="{backgroundColor:'var(--teal-300)'}" >
-        <div class="flex flex-wrap card-container">
+      <div class="card p-3 bg-teal-300 border-round-xl shadow-5" style="margin-left: 20px; margin-right:20px; width:auto;" [ngStyle]="{backgroundColor:'var(--teal-300)'}" >
+        <div class="flex flex-wrap card-container ">
           <router-outlet></router-outlet>
         </div>
       </div>
